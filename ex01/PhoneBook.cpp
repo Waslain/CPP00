@@ -6,7 +6,7 @@
 /*   By: fduzant <fduzant@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 15:52:35 by fduzant           #+#    #+#             */
-/*   Updated: 2023/10/25 23:15:06 by fduzant          ###   ########.fr       */
+/*   Updated: 2023/10/26 09:22:20 by fduzant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ bool	PhoneBook::_is_numeric(const char* str) const
 	return true;
 }
 
-void	PhoneBook::_showcontact(int i)
+void	PhoneBook::_showcontact(int i) const
 {
 	std::cout << "Ton contact numéro " << i << " :"<< std::endl;
 	Contact contact = _contacts[i];
@@ -50,7 +50,7 @@ void	PhoneBook::_showcontact(int i)
 	std::cout << contact.darkest_secret << std::endl;
 }
 
-void	PhoneBook::search(void)
+void	PhoneBook::search(void) const
 {
 	std::string	u_input;
 	int	i = 0;
@@ -96,7 +96,6 @@ void	PhoneBook::search(void)
 	{
 		std::cout << "Quel contacte souhaite tu afficher ?" << std::endl;
 		std::getline(std::cin, u_input);
-
 		if (_is_numeric(u_input.c_str()) == false)
 			std::cout << "Veuillez entrer un chiffre" << std::endl;
 		else if (std::atoi(u_input.c_str()) < 0 || std::atoi(u_input.c_str()) >= _num_contacts)
