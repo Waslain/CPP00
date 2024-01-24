@@ -6,7 +6,7 @@
 /*   By: fduzant <fduzant@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 16:28:17 by fduzant           #+#    #+#             */
-/*   Updated: 2023/10/25 23:18:39 by fduzant          ###   ########.fr       */
+/*   Updated: 2024/01/24 17:09:21 by fduzant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ int	main()
 	
 	while (1)
 	{
+		std::cout << "Enter a command (ADD, SEARCH or EXIT): " << std::endl;
 		std::cin >> u_input;
 		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 		if (u_input.compare("EXIT") == 0)
